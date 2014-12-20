@@ -11,3 +11,5 @@ Yupik Checkbox
 Install using Bower:
 
     $ bower install --save yupik-checkbox
+
+Need class .lte9 to the body for graceful degradation

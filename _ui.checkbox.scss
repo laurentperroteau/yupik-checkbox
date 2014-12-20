@@ -3,19 +3,20 @@
 /* ::: C U S T O M   C H E C K B O X ::: */
 /* ------------------------------------- */
 
-/* #Custom checkbox */
-/* ---------------- */
-/*
-    <div class="yupik-checkbox">
-        <input type="checkbox" class="yupik-checkbox__input" id="recevoir" />
-        <label for="recevoir" class="yupik-checkbox__label">
-            Recevoir la newsletter !
-            <span>&nbsp;</span>
-        </label>
-    </div>
- */
+ // The html
 
-// Setting switch checkbox
+// <div class="yupik-checkbox">
+//     <input type="checkbox" class="yupik-checkbox__input" id="recevoir" />
+//     <label for="recevoir" class="yupik-checkbox__label">
+//         Recevoir la newsletter !
+//         <span>&nbsp;</span>
+//     </label>
+// </div>
+
+
+// Default variable
+$yupik-checkbox-namespace: $inuit-namespace !default;
+
 $yupik-checkbox-width: 20px !default;
 $yupik-checkbox-border: true !default;
 $yupik-checkbox-border-color: null !default;
@@ -41,9 +42,9 @@ $yupik-checkbox-border-width: 0;
 }
 
 // The SCSS
-.yupik-checkbox { position: relative }
+.#{$yupik-checkbox-namespace}checkbox { position: relative }
 
-.yupik-checkbox__label {
+.#{$yupik-checkbox-namespace}checkbox__label {
     position: relative;
     display: inline-block;
     min-width: $yupik-checkbox-width; min-height: $yupik-checkbox-width;
@@ -52,7 +53,7 @@ $yupik-checkbox-border-width: 0;
 
 $yupik-checkbox-padding: ($yupik-checkbox-width - $yupik-checkbox-border-width) / 2;
 
-.yupik-checkbox__label > span {
+.#{$yupik-checkbox-namespace}checkbox__label > span {
     position: absolute; left: 0; top: 0;
     display: inline-block;
     height: 1px;
@@ -77,13 +78,13 @@ $yupik-checkbox-padding: ($yupik-checkbox-width - $yupik-checkbox-border-width) 
     }
 }
 
-.yupik-checkbox__input {
+.#{$yupik-checkbox-namespace}checkbox__input {
     display: none !important;
 
 
     &:checked {
 
-        & + .yupik-checkbox__label > span {
+        & + .#{$yupik-checkbox-namespace}checkbox__label > span {
             color: $yupik-checkbox-color-check;
 
             @if( $yupik-checkbox-background-color-active ) {   
@@ -111,10 +112,10 @@ $yupik-checkbox-padding: ($yupik-checkbox-width - $yupik-checkbox-border-width) 
 // IE8
 .lte9 {
     
-    .yupik-checkbox__input { 
+    .#{$yupik-checkbox-namespace}checkbox__input { 
         display: inline-block !important;
         position: absolute; left: 0; top: 0;
     }
     
-    .yupik-checkbox__label > span { display: none !important }
+    .#{$yupik-checkbox-namespace}checkbox__label > span { display: none !important }
 }
