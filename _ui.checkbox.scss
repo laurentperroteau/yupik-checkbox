@@ -5,8 +5,8 @@
 
  // The html
 
-// <div class="yupik-checkbox">
-//     <input type="checkbox" class="yupik-checkbox__input" id="recevoir" />
+// <div class="checkbox">
+//     <input type="checkbox" class="yupik-checkbox__input" id="recevoir" checked />
 //     <label for="recevoir" class="yupik-checkbox__label">
 //         Recevoir la newsletter !
 //         <span>&nbsp;</span>
@@ -21,7 +21,7 @@ $yupik-checkbox-width: 20px !default;
 $yupik-checkbox-border: true !default;
 $yupik-checkbox-border-color: null !default;
 $yupik-checkbox-border-color-active: null !default;
-$yupik-checkbox-color-check: red !default;
+$yupik-checkbox-color-check: #db6313 !default;
 $yupik-checkbox-font-size: 20px !default;
 $yupik-checkbox-radius: null !default;
 $yupik-checkbox-background-color: null !default;
@@ -93,7 +93,8 @@ $yupik-checkbox-padding: ($yupik-checkbox-width - $yupik-checkbox-border-width) 
 
             &:after {
                 content: '\2714';
-                @include cube($yupik-checkbox-width);
+                width: $yupik-checkbox-width;
+                height: $yupik-checkbox-width;
                 position: absolute; left: 0; top: 0;
                 font-size: $yupik-checkbox-font-size; text-align: center;
                 line-height: $yupik-checkbox-width;
