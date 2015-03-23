@@ -5,7 +5,7 @@
 
  // The html
 
-// <div class="checkbox">
+// <div class="yupik-checkbox">
 //     <input type="checkbox" class="yupik-checkbox__input" id="recevoir" checked />
 //     <label for="recevoir" class="yupik-checkbox__label">
 //         Recevoir la newsletter !
@@ -49,6 +49,10 @@ $yupik-checkbox-border-width: 0;
     display: inline-block;
     min-width: $yupik-checkbox-width; min-height: $yupik-checkbox-width;
     padding-left: $yupik-checkbox-width + 10px;
+}
+
+.#{$yupik-checkbox-namespace}checkbox__label--no-label {
+  padding-left: 0;
 }
 
 $yupik-checkbox-padding: ($yupik-checkbox-width - $yupik-checkbox-border-width) / 2;
