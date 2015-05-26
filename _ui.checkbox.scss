@@ -1,7 +1,7 @@
 
-/* ------------------------------------- */
-/* ::: C U S T O M   C H E C K B O X ::: */
-/* ------------------------------------- */
+/* ---------------------- */
+/* ::: Yupik Checkbox ::: */
+/* ---------------------- */
 
  // The html
 
@@ -41,6 +41,7 @@ $yupik-checkbox-border-width: 0;
     $yupik-checkbox-width: $yupik-checkbox-width + 1px;
 }
 
+
 // The SCSS
 .#{$yupik-checkbox-namespace}checkbox { position: relative }
 
@@ -58,8 +59,7 @@ $yupik-checkbox-padding: ($yupik-checkbox-width - $yupik-checkbox-border-width) 
     display: inline-block;
     height: 1px;
     padding: $yupik-checkbox-padding ($yupik-checkbox-padding - 2);
-    -webkit-appearance: none;
-    -moz-appearance: none;
+    @include vendor(appearance, none);
     
     @if( $yupik-checkbox-radius ) {   
         @include vendor(border-radius, $yupik-checkbox-radius);
@@ -80,7 +80,6 @@ $yupik-checkbox-padding: ($yupik-checkbox-width - $yupik-checkbox-border-width) 
 
 .#{$yupik-checkbox-namespace}checkbox__input {
     display: none !important;
-
 
     &:checked {
 
