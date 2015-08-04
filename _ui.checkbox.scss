@@ -93,7 +93,8 @@ $yupik-checkbox-padding: ($yupik-checkbox-width - $yupik-checkbox-border-width) 
             @if( $yupik-checkbox-background-color-active ) {   
                 background-color: $yupik-checkbox-background-color-active;
             }
-
+            
+            // TODO: disable if SVG icon
             &:after {
                 content: '\2714';
                 width: $yupik-checkbox-width;
