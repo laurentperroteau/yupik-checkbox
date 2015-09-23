@@ -83,7 +83,14 @@ $yupik-checkbox-padding: ($yupik-checkbox-width - $yupik-checkbox-border-width) 
 }
 
 .#{$yupik-checkbox-namespace}checkbox__input {
-    display: none !important;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0; 
 
     &:checked {
 
@@ -118,9 +125,17 @@ $yupik-checkbox-padding: ($yupik-checkbox-width - $yupik-checkbox-border-width) 
 .lte9 {
     
     .#{$yupik-checkbox-namespace}checkbox__input { 
-        display: inline-block !important;
         position: absolute; left: 0; top: 0;
     }
     
-    .#{$yupik-checkbox-namespace}checkbox__label > span { display: none !important }
+    .#{$yupik-checkbox-namespace}checkbox__input,
+    .#{$yupik-checkbox-namespace}checkbox__label > span {
+        position: relative;
+        width: auto;
+        height: auto;
+        margin: 0;
+        padding: 0;
+        overflow: visible;
+        clip: auto;
+    }
 }
